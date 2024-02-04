@@ -1,0 +1,32 @@
+---
+import ExperiencieItem from './ExperiencieItem.astro';
+
+const EXPERIENCIE = [
+  {
+    date: 'Septiembre 2023',
+    title: 'Fullstack Developer',
+    company: 'Bancolombia',
+    description:
+      'Escale y desarrolle nuevos servicios en la plataforma del GRC, para el consumo de información frente al análisis de datos, por lo que recorte los tiempos de carga y despliegue en producción. Mejorando la accesibilidad, confidencialidad y seguridad en el cliente',
+    link: 'https://grc-rotic.apps.bancolombia.com/',
+  },
+  {
+    date: 'Agosto 2023',
+    title: 'Lead Frontend Architect',
+    company: 'NoCountry',
+    description:
+      'Lidere la incorporación y mantenibilidad del código del cliente, fine SOLID principles, consumo de APIs, manejador estado global, autentificación, seguridad e intérprete componentización en los sides projects',
+    link: 'https://www.nocountry.tech/',
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li>
+        <ExperiencieItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

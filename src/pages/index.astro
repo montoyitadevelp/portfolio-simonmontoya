@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Experiencie from '../components/Experiencie.astro';
+import Container from '../components/Container.astro';
+import Work from '../icons/Work.astro';
+import Code from '../icons/Code.astro';
+import Projects from '../components/Projects.astro';
+import Hero from '../components/Hero.astro';
+import ProfileCheck from '../icons/ProfileCheck.astro';
+import AboutMe from '../components/AboutMe.astro';
+---
+
+<Layout
+  title="Porfolio de Simón Montoya - Fullstack Developer & Ethical Hacking"
+  description="Contrata a Simón Montoya para crear, mantener y prolongar tu aplicación segura e eficiente"
+>
+  <main class="px-4">
+    <Container class="py-16 md:py-36">
+      <Hero>
+        <slot />
+      </Hero>
+    </Container>
+
+    <div class="space-y-24">
+      <Container id="experiencia">
+        <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+          <Work class="size-6" />
+          Experiencia laboral
+        </h2>
+        <Experiencie />
+      </Container>
+
+      <Container id="proyectos">
+        <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+          <Code class="size-6" />
+          Proyectos
+        </h2>
+        <Projects />
+      </Container>
+
+      <Container id="sobre-mi">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+        >
+          <ProfileCheck class="size-8" />
+          Sobre mí
+        </h2>
+        <AboutMe />
+      </Container>
+    </div>
+  </main>
+</Layout>
